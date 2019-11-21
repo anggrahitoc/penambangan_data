@@ -1,0 +1,1229 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Repository Untuk Tugas">
+      
+      
+        <link rel="canonical" href="https://anggrahitoc.github.io/regresi/">
+      
+      
+        <meta name="author" content="Anggrahito Cahyo Dwi P.">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+    
+    
+      
+        <title>Regresi Linier - (180411100019) Anggrahito Cahyo Dwi P.</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="../manifest.webmanifest">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-XXXXXXXX-X", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#regresi-linier-sederhana" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://anggrahitoc.github.io/" title="(180411100019) Anggrahito Cahyo Dwi P." class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              (180411100019) Anggrahito Cahyo Dwi P.
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Regresi Linier
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/anggrahitoc/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Anggrahito Cahyo
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://anggrahitoc.github.io/" title="(180411100019) Anggrahito Cahyo Dwi P." class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    (180411100019) Anggrahito Cahyo Dwi P.
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/anggrahitoc/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Anggrahito Cahyo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Statistik Dekriptif/" title="Statistik Deskriptif" class="md-nav__link">
+      Statistik Deskriptif
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Mengukur Jarak/" title="Mengukur Jarak" class="md-nav__link">
+      Mengukur Jarak
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Missing V/" title="Missing Values" class="md-nav__link">
+      Missing Values
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Pohon Keputusan/" title="Pohon Keputusan" class="md-nav__link">
+      Pohon Keputusan
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../clustering/" title="Clustering" class="md-nav__link">
+      Clustering
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../fuzzy/" title="Fuzzy C-Means" class="md-nav__link">
+      Fuzzy C-Means
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Regresi Linier
+      </label>
+    
+    <a href="./" title="Regresi Linier" class="md-nav__link md-nav__link--active">
+      Regresi Linier
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pengertian" class="md-nav__link">
+    Pengertian
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#y-a-bx" class="md-nav__link">
+    Y = a + bX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algoritma-regresi-linier-sederhana" class="md-nav__link">
+    Algoritma Regresi Linier Sederhana
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pengertian" class="md-nav__link">
+    Pengertian
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#y-a-bx" class="md-nav__link">
+    Y = a + bX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algoritma-regresi-linier-sederhana" class="md-nav__link">
+    Algoritma Regresi Linier Sederhana
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/anggrahitoc/edit/master/docs/regresi.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="regresi-linier-sederhana">Regresi Linier Sederhana<a class="headerlink" href="#regresi-linier-sederhana" title="Permanent link">&para;</a></h1>
+<h2 id="pengertian">Pengertian<a class="headerlink" href="#pengertian" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><div style= "justify">Regresi Linear Sederhana adalah Metode Statistik yang berfungsi untuk menguji sejauh mana hubungan sebab akibat antara Variabel Faktor Penyebab (X) terhadap Variabel Akibatnya.</div></p>
+</blockquote>
+<div style= "justify">Faktor Penyebab pada umumnya dilambangkan dengan X atau disebut juga dengan Predictor sedangkan Variabel Akibat dilambangkan dengan Y atau disebut juga dengan Response. Regresi Linear Sederhana atau sering disingkat dengan SLR (Simple Linear Regression) juga merupakan salah satu Metode Statistik yang dipergunakan dalam produksi untuk melakukan peramalan ataupun prediksi tentang karakteristik kualitas maupun Kuantitas.</div>
+
+<p>Model Persamaan Regresi Linear Sederhana adalah seperti berikut ini :</p>
+<h3 id="y-a-bx"><strong>Y = a + bX</strong><a class="headerlink" href="#y-a-bx" title="Permanent link">&para;</a></h3>
+<p>Dimana :
+Y = Variabel Response atau Variabel Akibat (Dependent)
+X = Variabel Predictor atau Variabel Faktor Penyebab (Independent)
+a = konstanta
+b = koefisien regresi (kemiringan); besaran Response yang ditimbulkan oleh Predictor.</p>
+<p>Nilai-nilai a dan b dapat dihitung dengan menggunakan Rumus dibawah ini :</p>
+<p>a =   (Σy) (Σx²) – (Σx) (Σxy)
+                n(Σx²) – (Σx)²</p>
+<p>b =   n(Σxy) – (Σx) (Σy)
+            n(Σx²) – (Σx)²</p>
+<h3 id="algoritma-regresi-linier-sederhana">Algoritma Regresi Linier Sederhana<a class="headerlink" href="#algoritma-regresi-linier-sederhana" title="Permanent link">&para;</a></h3>
+<p>Berikut ini adalah Langkah-langkah dalam melakukan Analisis Regresi Linear Sederhana :</p>
+<ol>
+    <li>Tentukan Tujuan dari melakukan Analisis Regresi Linear Sederhana</li>
+    <li>Identifikasikan Variabel Faktor Penyebab (Predictor) dan Variabel Akibat (Response)</li>
+    <li>Lakukan Pengumpulan Data</li>
+    <li>Hitung  X², Y², XY dan total dari masing-masingnya</li>
+    <li>Hitung a dan b berdasarkan rumus diatas.</li>
+    <li>Buatkan Model Persamaan Regresi Linear Sederhana.</li>
+    <li>Lakukan Prediksi atau Peramalan terhadap Variabel Faktor Penyebab atau Variabel Akibat.</li>
+</ol>
+
+<h1 id="regresi-linier-berganda">Regresi Linier Berganda<a class="headerlink" href="#regresi-linier-berganda" title="Permanent link">&para;</a></h1>
+<h2 id="pengertian_1">Pengertian<a class="headerlink" href="#pengertian_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><div style= "justify">Analisis regresi linier berganda adalah hubungan secara linear antara dua atau lebih variabel independen (X1, X2,….Xn) dengan variabel dependen (Y).</div></p>
+</blockquote>
+<div style= "justify">Analisis ini untuk mengetahui arah hubungan antara variabel independen dengan variabel dependen apakah masing-masing variabel independen berhubungan positif atau negatif dan untuk memprediksi nilai dari variabel dependen apabila nilai variabel independen mengalami kenaikan atau penurunan. Data yang digunakan biasanya berskala interval atau rasio.</div>
+
+<p>Model Persamaan Regresi Linear Sederhana adalah seperti berikut ini :</p>
+<h3 id="y-a-b1x1-b2x2-bnxn"><strong>Y’ = a + b1X1+ b2X2+…..+ bnXn</strong><a class="headerlink" href="#y-a-b1x1-b2x2-bnxn" title="Permanent link">&para;</a></h3>
+<p>Keterangan:</p>
+<p>Y’ = Variabel dependen (nilai yang diprediksikan)</p>
+<p>X1 dan X2 = Variabel independen</p>
+<p>a = Konstanta (nilai Y’ apabila X1, X2…..Xn = 0)</p>
+<p>b = Koefisien regresi (nilai peningkatan ataupun penurunan)</p>
+<h3 id="contoh-kasus-dengan-penghitungan-manual">Contoh Kasus Dengan Penghitungan Manual<a class="headerlink" href="#contoh-kasus-dengan-penghitungan-manual" title="Permanent link">&para;</a></h3>
+<p>Seorang Engineer ingin mempelajari Hubungan antara Suhu Ruangan dengan Jumlah Cacat yang diakibatkannya, sehingga dapat memprediksi atau meramalkan jumlah cacat produksi jika suhu ruangan tersebut tidak terkendali. Engineer tersebut kemudian mengambil data selama 30 hari terhadap rata-rata (mean) suhu ruangan dan Jumlah Cacat Produksi.</p>
+<p>Penyelesaiannya mengikuti Langkah-langkah dalam Analisis Regresi Linear Sederhana adalah sebagai berikut :</p>
+<h3 id="langkah-1-penentuan-tujuan">Langkah 1 : Penentuan Tujuan<a class="headerlink" href="#langkah-1-penentuan-tujuan" title="Permanent link">&para;</a></h3>
+<p><strong>Tujuan :</strong> Memprediksi Jumlah Cacat Produksi jika suhu ruangan tidak terkendali</p>
+<h3 id="langkah-2-identifikasikan-variabel-penyebab-dan-akibat">Langkah 2 : Identifikasikan Variabel Penyebab dan Akibat<a class="headerlink" href="#langkah-2-identifikasikan-variabel-penyebab-dan-akibat" title="Permanent link">&para;</a></h3>
+<p><strong>Varibel Faktor Penyebab (X)</strong> : Suhu Ruangan,
+<strong>Variabel Akibat (Y)</strong> : Jumlah Cacat Produksi</p>
+<h3 id="langkah-3-pengumpulan-data">Langkah 3 : Pengumpulan Data<a class="headerlink" href="#langkah-3-pengumpulan-data" title="Permanent link">&para;</a></h3>
+<p>Berikut ini adalah data yang berhasil dikumpulkan selama 30 hari (berbentuk tabel) :</p>
+<table>
+  <thead>
+    <tr style="text-align: center;">
+      <th>Tanggal</th>
+      <th>Rata-rata Suhu Ruangan</th>
+      <th>Jumlah Cacat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: center;">
+      <td>1</td>
+      <td>24</td>
+      <td>10</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td>2</td>
+      <td>22</td>
+      <td>5</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td>3</td>
+      <td>21</td>
+      <td>6</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td>4</td>
+      <td>20</td>
+      <td>3</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td>5</td>
+      <td>22</td>
+      <td>6</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td>6</td>
+      <td>19</td>
+      <td>4</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td>7</td>
+      <td>20</td>
+      <td>5</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td>8</td>
+      <td>23</td>
+      <td>9</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td>9</td>
+      <td>24</td>
+      <td>11</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td>10</td>
+      <td>25</td>
+      <td>13</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td>11</td>
+      <td>21</td>
+      <td>7</td>
+    </tr>
+      <tr style="text-align: center;">
+      <td>12</td>
+      <td>20</td>
+      <td>4</td>
+    </tr>
+      <tr style="text-align: center;">
+      <td>13</td>
+      <td>20</td>
+      <td>6</td>
+    </tr>
+      <tr style="text-align: center;">
+      <td>14</td>
+      <td>19</td>
+      <td>3</td>
+    </tr>
+      <tr style="text-align: center;">
+      <td>15</td>
+      <td>25</td>
+      <td>12</td>
+    </tr>
+      <tr style="text-align: center;">
+      <td>16</td>
+      <td>27</td>
+      <td>13</td>
+    </tr>
+      <tr style="text-align: center;">
+      <td>17</td>
+      <td>28</td>
+      <td>16</td>
+    </tr>
+      <tr style="text-align: center;">
+      <td>18</td>
+      <td>25</td>
+      <td>12</td>
+    </tr>
+      <tr style="text-align: center;">
+      <td>19</td>
+      <td>26</td>
+      <td>14</td>
+    </tr>
+      <tr style="text-align: center;">
+      <td>20</td>
+      <td>24</td>
+      <td>12</td>
+    </tr>
+      <tr style="text-align: center;">
+      <td>21</td>
+      <td>27</td>
+      <td>16</td>
+    </tr>
+      <tr style="text-align: center;">
+      <td>22</td>
+      <td>23</td>
+      <td>9</td>
+    </tr>
+      <tr style="text-align: center;">
+      <td>23</td>
+      <td>24</td>
+      <td>13</td>
+    </tr>
+      <tr style="text-align: center;">
+      <td>24</td>
+      <td>23</td>
+      <td>11</td>
+    </tr>
+      <tr style="text-align: center;">
+      <td>25</td>
+      <td>22</td>
+      <td>7</td>
+    </tr>
+      <tr style="text-align: center;">
+      <td>26</td>
+      <td>21</td>
+      <td>5</td>
+    </tr>
+      <tr style="text-align: center;">
+      <td>27</td>
+      <td>26</td>
+      <td>12</td>
+    </tr>
+      <tr style="text-align: center;">
+      <td>28</td>
+      <td>25</td>
+      <td>11</td>
+    </tr>
+      <tr style="text-align: center;">
+      <td>29</td>
+      <td>26</td>
+      <td>13</td>
+    </tr>
+      <tr style="text-align: center;">
+      <td>30</td>
+      <td>27</td>
+      <td>14</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="langkah-4-hitung-x2-y2-xy-dan-total-dari-masing-masingnya">Langkah 4 : Hitung X², Y², XY dan total dari masing-masingnya<a class="headerlink" href="#langkah-4-hitung-x2-y2-xy-dan-total-dari-masing-masingnya" title="Permanent link">&para;</a></h3>
+<p>Berikut ini adalah tabel yang telah dilakukan perhitungan X², Y², XY dan totalnya :</p>
+<table>
+  <thead>
+    <tr style="text-align: center;">
+      <th>Tanggal</th>
+      <th>Rata-rata Suhu Ruangan</th>
+      <th>Jumlah Cacat</th>
+      <th>X2</th>
+      <th>Y2</th>
+      <th>XY</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: center;">
+<td>1</td>
+<td>24</td>
+<td>10</td>
+<td>576</td>
+<td>100</td>
+<td>240</td>
+</tr>
+<tr style="text-align: center;">
+<td>2</td>
+<td>22</td>
+<td>5</td>
+<td>484</td>
+<td>25</td>
+<td>110</td>
+</tr>
+<tr style="text-align: center;">
+<td>3</td>
+<td>21</td>
+<td>6</td>
+<td>441</td>
+<td>36</td>
+<td>126</td>
+</tr>
+<tr style="text-align: center;">
+<td>4</td>
+<td>20</td>
+<td>3</td>
+<td>400</td>
+<td>9</td>
+<td>60</td>
+</tr>
+<tr style="text-align: center;">
+<td>5</td>
+<td>22</td>
+<td>6</td>
+<td>484</td>
+<td>36</td>
+<td>132</td>
+</tr>
+<tr style="text-align: center;">
+<td>6</td>
+<td>19</td>
+<td>4</td>
+<td>361</td>
+<td>16</td>
+<td>76</td>
+</tr>
+<tr style="text-align: center;">
+<td>7</td>
+<td>20</td>
+<td>5</td>
+<td>400</td>
+<td>25</td>
+<td>100</td>
+</tr>
+<tr style="text-align: center;">
+<td>8</td>
+<td>23</td>
+<td>9</td>
+<td>529</td>
+<td>81</td>
+<td>207</td>
+</tr>
+<tr style="text-align: center;">
+<td>9</td>
+<td>24</td>
+<td>11</td>
+<td>576</td>
+<td>121</td>
+<td>264</td>
+</tr>
+<tr style="text-align: center;">
+<td>10</td>
+<td>25</td>
+<td>13</td>
+<td>625</td>
+<td>169</td>
+<td>325</td>
+</tr>
+<tr style="text-align: center;">
+<td>11</td>
+<td>21</td>
+<td>7</td>
+<td>441</td>
+<td>49</td>
+<td>147</td>
+</tr>
+<tr style="text-align: center;">
+<td>12</td>
+<td>20</td>
+<td>4</td>
+<td>400</td>
+<td>16</td>
+<td>80</td>
+</tr>
+<tr style="text-align: center;">
+<td>13</td>
+<td>20</td>
+<td>6</td>
+<td>400</td>
+<td>36</td>
+<td>120</td>
+</tr>
+<tr style="text-align: center;">
+<td>14</td>
+<td>19</td>
+<td>3</td>
+<td>361</td>
+<td>9</td>
+<td>57</td>
+</tr>
+<tr style="text-align: center;">
+<td>15</td>
+<td>25</td>
+<td>12</td>
+<td>625</td>
+<td>144</td>
+<td>300</td>
+</tr>
+<tr style="text-align: center;">
+<td>16</td>
+<td>27</td>
+<td>13</td>
+<td>729</td>
+<td>169</td>
+<td>351</td>
+</tr>
+<tr style="text-align: center;">
+<td>17</td>
+<td>28</td>
+<td>16</td>
+<td>784</td>
+<td>256</td>
+<td>448</td>
+</tr>
+<tr style="text-align: center;">
+<td>18</td>
+<td>25</td>
+<td>12</td>
+<td>625</td>
+<td>144</td>
+<td>300</td>
+</tr>
+<tr style="text-align: center;">
+<td>19</td>
+<td>26</td>
+<td>14</td>
+<td>676</td>
+<td>196</td>
+<td>364</td>
+</tr>
+<tr style="text-align: center;">
+<td>20</td>
+<td>24</td>
+<td>12</td>
+<td>576</td>
+<td>144</td>
+<td>288</td>
+</tr>
+<tr style="text-align: center;">
+<td>21</td>
+<td>27</td>
+<td>16</td>
+<td>729</td>
+<td>256</td>
+<td>432</td>
+</tr>
+<tr style="text-align: center;">
+<td>22</td>
+<td>23</td>
+<td>9</td>
+<td>529</td>
+<td>81</td>
+<td>207</td>
+</tr>
+<tr style="text-align: center;">
+<td>23</td>
+<td>24</td>
+<td>13</td>
+<td>576</td>
+<td>169</td>
+<td>312</td>
+</tr>
+<tr style="text-align: center;">
+<td>24</td>
+<td>23</td>
+<td>11</td>
+<td>529</td>
+<td>121</td>
+<td>253</td>
+</tr>
+<tr style="text-align: center;">
+<td>25</td>
+<td>22</td>
+<td>7</td>
+<td>484</td>
+<td>49</td>
+<td>154</td>
+</tr>
+<tr style="text-align: center;">
+<td>26</td>
+<td>21</td>
+<td>5</td>
+<td>441</td>
+<td>25</td>
+<td>105</td>
+</tr>
+<tr style="text-align: center;">
+<td>27</td>
+<td>26</td>
+<td>12</td>
+<td>676</td>
+<td>144</td>
+<td>312</td>
+</tr>
+<tr style="text-align: center;">
+<td>28</td>
+<td>25</td>
+<td>11</td>
+<td>625</td>
+<td>121</td>
+<td>275</td>
+</tr>
+<tr style="text-align: center;">
+<td>29</td>
+<td>26</td>
+<td>13</td>
+<td>676</td>
+<td>169</td>
+<td>338</td>
+</tr>
+<tr style="text-align: center;">
+<td>30</td>
+<td>27</td>
+<td>14</td>
+<td>729</td>
+<td>196</td>
+<td>378</td>
+</tr>
+  </tbody>
+</table>
+
+<h3 id="langkah-5-hitung-a-dan-b-berdasarkan-rumus-regresi-linear-sederhana">Langkah 5 : Hitung a dan b berdasarkan rumus Regresi Linear Sederhana<a class="headerlink" href="#langkah-5-hitung-a-dan-b-berdasarkan-rumus-regresi-linear-sederhana" title="Permanent link">&para;</a></h3>
+<p>Menghitung Konstanta (a) :</p>
+<p>a =   (Σy) (Σx²) – (Σx) (Σxy)
+               n(Σx²) – (Σx)²</p>
+<p>a = (282) (16.487) – (699) (6.861)
+                30 (16.487) – (699)²</p>
+<p>a = -24,38</p>
+<p>Menghitung Koefisien Regresi (b)</p>
+<p>b =   n(Σxy) – (Σx) (Σy)
+           n(Σx²) – (Σx)²</p>
+<p>b = 30 (6.861) – (699) (282)
+          30 (16.487) – (699)²</p>
+<p>b = 1,45</p>
+<h3 id="langkah-6-buat-model-persamaan-regresi">Langkah 6 : Buat Model Persamaan Regresi<a class="headerlink" href="#langkah-6-buat-model-persamaan-regresi" title="Permanent link">&para;</a></h3>
+<p>Y = a + bX
+Y = -24,38 + 1,45X</p>
+<h3 id="langkah-7-lakukan-prediksi-atau-peramalan-terhadap-variabel-faktor-penyebab-atau-variabel-akibat">Langkah 7 : Lakukan Prediksi atau Peramalan terhadap Variabel Faktor Penyebab atau Variabel Akibat<a class="headerlink" href="#langkah-7-lakukan-prediksi-atau-peramalan-terhadap-variabel-faktor-penyebab-atau-variabel-akibat" title="Permanent link">&para;</a></h3>
+<p>I. Prediksikan Jumlah Cacat Produksi jika suhu dalam keadaan tinggi (Variabel X), contohnya : 30°C</p>
+<p>Y = -24,38 + 1,45 (30)
+Y = 19,12</p>
+<p>Jadi Jika Suhu ruangan mencapai 30°C, maka akan diprediksikan akan terdapat <strong>19,12 unit cacat</strong> yang dihasilkan oleh produksi.</p>
+<p>II. Jika Cacat Produksi (Variabel Y) yang ditargetkan hanya boleh 4 unit, maka berapakah suhu ruangan yang diperlukan untuk mencapai target tersebut ?</p>
+<p>4 = -24,38 + 1,45X
+1,45X = 4 + 24,38
+X = 28,38 / 1,45
+X = 19,57</p>
+<p>Jadi Prediksi Suhu Ruangan yang paling sesuai untuk mencapai target Cacat Produksi adalah sekitar <strong>19,57°C</strong></p>
+<h3 id="contoh-kasus-dengan-penghitungan-menggunakan-sklearn">Contoh Kasus Dengan Penghitungan Menggunakan Sklearn<a class="headerlink" href="#contoh-kasus-dengan-penghitungan-menggunakan-sklearn" title="Permanent link">&para;</a></h3>
+<p>Berikut contoh data yang ingin dicari</p>
+<p><img alt="" src="https://1.bp.blogspot.com/-eMsvH3W6DX0/W0dTKbJXLYI/AAAAAAAAABM/SDS-sAqdb8IdxZsW4K7patn_Jgv5vBJmACLcBGAs/s320/1.JPG" /></p>
+<ol>
+<li>Langkah pertama adalah import librari yang ada pada python</li>
+</ol>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">statsmodels</span>
+<span class="kn">import</span> <span class="nn">patsy</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="kn">as</span> <span class="nn">sm</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> 
+</pre></div>
+
+
+<ol>
+<li>kemudian import model</li>
+</ol>
+<div class="codehilite"><pre><span></span><span class="c1">#Import model</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+</pre></div>
+
+
+<ol>
+<li>Masukan data yang telah berbentuk csv dengan memanggil datanya sesuai tempat penyimpanannya</li>
+</ol>
+<p><code>python
+   data=pd.read_csv(“post2.csv”, sep=”;”)
+   data</code></p>
+<ol>
+<li>Pilih HRG dan Kurs untuk variabel X dan EKS sebagai variabel y:</li>
+</ol>
+<div class="codehilite"><pre><span></span><span class="n">feature_names</span><span class="o">=</span><span class="p">[</span><span class="err">‘</span><span class="n">HRG</span><span class="err">’</span><span class="p">,</span><span class="err">’</span><span class="n">KURS</span><span class="err">’</span><span class="p">]</span>
+<span class="n">X</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="n">feature_names</span><span class="p">]</span>
+<span class="n">X</span>
+<span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">EKS</span>
+</pre></div>
+
+
+<ol>
+<li>Kemudian memisahkan X dan y ke dalam data latih (train) dan data pengujian (test):</li>
+</ol>
+<div class="codehilite"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+
+<ol>
+<li>Linear Regression Model, Membuat model dengan data latih, Membuat prediksi pada data pengujian</li>
+</ol>
+<div class="codehilite"><pre><span></span><span class="n">Linreg</span><span class="o">=</span><span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">Linreg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred</span><span class="o">=</span><span class="n">linreg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="" src="https://3.bp.blogspot.com/-YOg7kKmND4E/W0dT9_7xHiI/AAAAAAAAABU/yQ5CQ37wYBgVgBVxCQYm17ySn_wy4VvLwCLcBGAs/s400/2.JPG" /></p>
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">))</span>
+</pre></div>
+
+
+<p><img alt="" src="https://4.bp.blogspot.com/-rVkYK9i4BUg/W0dUnxw-aCI/AAAAAAAAABg/LZ7BTNZ7XjAz6fZmEnCEB_6QcJaojouvgCLcBGAs/s400/3.JPG" /></p>
+<div class="codehilite"><pre><span></span><span class="c1">#mencari model regresi</span>
+<span class="n">model</span><span class="o">=</span><span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">predictions</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+
+
+<p><img alt="" src="https://2.bp.blogspot.com/-g2ufUcd2u28/W0dVCeadUnI/AAAAAAAAABo/UmJ0FqGU6ngq3jPo_AtpvklHFiTVdLQVQCLcBGAs/s400/4.JPG" /></p>
+<div class="codehilite"><pre><span></span><span class="c1">#menambahkan variabel konstan</span>
+<span class="n">X</span><span class="o">=</span><span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">model</span><span class="o">=</span><span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Pada Gambar  diatas diketahui bahwa fungsi yang dibuat menghasilkan model linier sederhana yaitu:</p>
+<p><img alt="" src="https://4.bp.blogspot.com/-s46yymNbVLA/W0dV4qdF0PI/AAAAAAAAAB8/KcHV-1EUl18iti55R3CdpFFy3GCL6Lb-gCLcBGAs/s400/6.JPG" /></p>
+<blockquote>
+<p>Berdasarkan model diatas artinya jika HRG dan KURS mendekati nol maka nilai EKS -4067.4959. Sedangkan jika HRG naik satu satuan akan menaikkan nilai EKS sebesar 7.8150 dan jika KURS naik satu satuan maka akan menaikkan EKS sebesar 1001.8555 dengan R-square sebesar 0.911 atau 91.1% variabel HRG dan KURS dapat menjelaskan variabel EKS.</p>
+</blockquote>
+<p><strong>- Uji parsial</strong></p>
+<p>Uji parsial digunakan untuk menguji parameter secara parsial dengan kata lain untuk mengetahui apakah <em>variable independent</em> (X) berpengaruh secara signifikan (nyata) terhadap <em>variable dependent</em> (Y). Dari gambar didapat p-value (Konsatanta) sebesar 0.391, nilai (HRG) sebesar 0.001 dan nilai (KURS) sebesar 0.000.</p>
+<p>Berikut hipotesisnya:</p>
+<p>- Hipotesis</p>
+<p>​       H0 : βi = 0, i = 0,1,2 (Tidak terdapat pengaruh secara signifikan antara X dengan Y)</p>
+<p>​       H1 : βi ≠ 0, i = 0,1,2 (Ada pengaruh secara signifikan antara X dengan Y)</p>
+<p>- Tingkat signifikasi</p>
+<p>​       ∝=5% = 0.05</p>
+<p>- Daerah kritis</p>
+<p>​   Jika p-<em>value</em> ≤ ∝ (0.05) → Tolak H0</p>
+<p>- Statistik uji</p>
+<p>​       P-value* :  = 0.001 dan  = 0.000 ; ∝= 0,05</p>
+<p>-  Keputusan</p>
+<p>​   Karena nilai p-<em>value</em> untuk β1 dan β2 &lt;  ∝ maka tolak</p>
+<p>- Kesimpulan</p>
+<p>​   Dengan tingkat kepercayaan 95% terdapat pengaruh secara signifikan antara <em>variable</em> X (HRG dan KURS) dengan variabel Y(EKS).</p>
+<p><strong>- Uji Normalitas</strong></p>
+<p>​   Uji Normalitaas adalah untuk melihat apakah nilai residual terdistribusi normal atau tidak. Model regresi yang baik adalah memiliki nilai residual yang terdistribusi normal. Disini kita menggunakan nilai prob Jaque Bera (JB) dari gambar output diatas sebesar 0.571. </p>
+<p>Dengan hipotesis sebagai berikut:</p>
+<p>​       - Menentukan Hipotesis</p>
+<p>​        H0 : Residual berdistribusi normal</p>
+<p>​        H1 : Residual tidak Berdistribusi Normal</p>
+<p>​       - Tingkat signifikansi</p>
+<p>​         ∝=5% (∝=0.05)</p>
+<p>​       - Statistik Uji</p>
+<p>​         <em>p-value</em> =  0.571</p>
+<p>​      - Daerah kritis</p>
+<p>​           Tolak H0 jika <em>p-value</em> &lt; α</p>
+<p>​      - Keputusan</p>
+<p>​       Karena nilai <em>p-value</em> sama dengan 0.571, dimana nilai <em>p-value</em> &gt;α yaitu 0.571 &gt; 0,05 maka gagal tolak H0.</p>
+<p>​     - Kesimpulan
+​       Jadi, dengan tingkat kepercayaan 95% dapat disimpulkan bahwa residual berdistribusi normal.</p>
+<p><strong>- Uji Autokorelasi</strong></p>
+<p>​   Dianalisis autokorelasi ini jadi tidak boleh ada korelasi (non-autokorelasi) antara observasi dengan data observasi sebelumnya. Dapat dilihat dari gambar output diatas bahwa uji autokorelasi menggunakan output DW(Durbin-Watson) sebesar 2.162. </p>
+<p>​     -  Menentukan Hipotesis</p>
+<p>​      H0 : Tidak terdapat Autokorelasi</p>
+<p>​      H1 : terdapat Autokorelasi</p>
+<p>​     -  Tingkat signifikansi</p>
+<p>​      ∝=5 (∝=0,05)</p>
+<p>​     - Menentukan daerah kritis</p>
+<p>​      Tolak H0 : jika 0 &lt; DW &lt; dl  atau 4 – dl &lt; DW &lt; 4</p>
+<p>​      Gagal tolak H0  : jika du &lt; DW &lt;4 – du</p>
+<p>​      Tidak ada keputusan : jika dl &lt; DW &lt; du atau 4 – du &lt; DW &lt; 4 – dl</p>
+<p>​     - Statistik uji</p>
+<p>​      Karena nilai <em>DW</em>2.162 dngean du &lt; DW &lt;4 – du atau 0.9820 &lt; DW &lt;4 – 1.5386 maka interval daerah keputusannya yaitu  0.9820&lt; 2,162 &lt; 2.4614 sehingga dapat dikatakan bahwa Tolak H0.  </p>
+<p>​    -  Kesimpulan</p>
+<p>​   Jadi, dengan tingkat signifikansi 5% dapat disimpulkan bahwa keputusan uji adalah Tidak terdapat        Autokorelasi.</p>
+<p><strong>- Uji Heteroskedastisitas</strong></p>
+<p>​   Uji Heteroskedastistas untuk melihat apakah terdapat ketidaksamaan varians dari residual satu ke pengamatan yang lain. Disini antar pengamatan harus homoskedastisitas.</p>
+<div class="codehilite"><pre><span></span><span class="n">Import</span> <span class="n">statsmodels</span><span class="o">.</span><span class="n">formula</span><span class="o">.</span><span class="n">api</span> <span class="k">as</span> <span class="n">smf</span>
+<span class="n">lm</span><span class="o">=</span><span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="err">”</span><span class="n">EKS</span><span class="o">~</span><span class="n">HRG</span><span class="o">+</span><span class="n">KURS</span><span class="err">”</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">lm</span>
+<span class="n">resid</span><span class="o">=</span><span class="n">lm</span><span class="o">.</span><span class="n">resid</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">lm</span><span class="o">.</span><span class="n">predict</span><span class="p">(),</span><span class="n">resid</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="" src="https://1.bp.blogspot.com/-5cjA5NTzyjQ/W0eBmVfQbVI/AAAAAAAAADI/a6f9zCe4x0g3dJbmpJ5T5074immpFpHOgCLcBGAs/s400/7.JPG" /></p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.stats</span> <span class="kn">as</span> <span class="nn">stats</span>
+<span class="n">stats</span><span class="o">.</span><span class="n">diagnostic</span><span class="o">.</span><span class="n">het_white</span><span class="p">(</span><span class="n">resid</span><span class="p">,</span> <span class="n">lm</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">exog</span><span class="p">,</span> <span class="n">retres</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+
+<p><img alt="" src="https://2.bp.blogspot.com/-fQPxWKrIAZo/W0eBy6MCUYI/AAAAAAAAADM/Rb-l0ZPJ1jAsJx3Wi9FxHEkaDeSDChiXgCLcBGAs/s400/8.JPG" /></p>
+<p><img alt="" src="https://1.bp.blogspot.com/--WLMRXONiPc/W0eB7RKYBPI/AAAAAAAAADU/xW1p2j59hhYOiIkrXdpydp9RrTNhKwZNwCLcBGAs/s320/9.JPG" /></p>
+<blockquote>
+<p>Dari <em>output</em> diatas dapat diketahui bahwa titik-titik tidak berbentuk pula yang jelas. Dan titik-titik penyebar diatas dan dibawah angka 0 pada sumbu Y. Jadi dapat disimpulkan bahwa tidak terjadi masalah heteroskedastisitas dalam model regresi. </p>
+</blockquote>
+<p><strong>- Uji Multikolinearitas</strong></p>
+<p>​   Uji Multikolinearitas untuk melihat ada tidaknya korelasdi antara variabel bebas dalam regresi linear berganda. </p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">patsy</span> <span class="kn">import</span> <span class="n">dmatrices</span>
+<span class="kn">from</span> <span class="nn">statsmodels.stats.outliers_influence</span> <span class="kn">import</span> <span class="n">variance_inflation_factor</span>
+<span class="n">lm</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span> <span class="o">=</span> <span class="err">“</span><span class="n">EKS</span><span class="o">~</span><span class="n">HRG</span><span class="o">+</span><span class="n">KURS</span><span class="err">”</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">y</span><span class="p">,</span><span class="n">X</span> <span class="o">=</span> <span class="n">dmatrices</span> <span class="p">(</span><span class="err">“</span><span class="n">EKS</span><span class="o">~</span> <span class="n">HRG</span><span class="o">+</span><span class="n">KURS</span><span class="err">”</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span> <span class="n">return_type</span> <span class="o">=</span><span class="err">”</span><span class="n">dataframe</span><span class="err">”</span><span class="p">)</span>
+<span class="n">vif</span> <span class="o">=</span> <span class="p">[</span><span class="n">variance_inflation_factor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">vif</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="" src="https://3.bp.blogspot.com/-rBuI_isANg8/W0eDuesWApI/AAAAAAAAADg/rrh6RVLRrzown7QZAwNspjjeJa2VUlJ2wCLcBGAs/s400/10.JPG" /></p>
+<ul>
+<li>Menentukan Hipotesis</li>
+</ul>
+<p>H0 : VIF &lt; 10 artinya tidak terdapat Multikolinearitas.</p>
+<p>H1  : VIF &gt; 10 artinya terdapat Multikolinearitas.</p>
+<p>- Tingkat signifikansi</p>
+<p>​    ∝=5% (∝=0.05)</p>
+<p>- Statistik Uji</p>
+<p>VIF :</p>
+<p>​   Konstan = 2.691</p>
+<p>​        HRG = 1.248</p>
+<p>​        KURS = 1.248</p>
+<p>​      -  Daerah Kritis</p>
+<p>​           Tolak H0 jika <em>VIF</em> &gt; ∝, Tolak H0</p>
+<p>​      -  Keputusan</p>
+<p>​         Karena nilai VIF (Konstan = 2.691, HRG =1.248, KURS = 1.248) &lt; α maka gagal Tolak H0</p>
+<p>- Kesimpulan</p>
+<p>Jadi, dengan tingkat kepercayaan 95% dapat disimpulkan bahwa tidak terdapat Multikolinearitas.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../fuzzy/" title="Fuzzy C-Means" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Fuzzy C-Means
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 - 2020 Anggrahito Cahyo
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/anggrahitoc" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://facebook.com/JG.cahyo" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c648116f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
